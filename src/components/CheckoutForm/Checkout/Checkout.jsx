@@ -7,7 +7,7 @@ import AddressForm from '../AddressForm';
 import PaymentForm from '../PaymentForm';
 import useStyles from './styles';
 
-const steps = ['Shipping address', 'Payment details'];
+const steps = ['Información', 'Detalles de pago'];
 
 const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
   const [checkoutToken, setCheckoutToken] = useState(null);
@@ -77,7 +77,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, error }) => {
       <div className={classes.toolbar} />
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography variant="h4" align="center">Checkout</Typography>
+          <Typography variant="h4" align="center">Carrito de Compra</Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((label) => (
               <Step key={label}>
